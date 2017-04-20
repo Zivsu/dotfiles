@@ -10,6 +10,9 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'fatih/vim-go'
+Plugin 'elixir-lang/vim-elixir'
 
 call vundle#end()                   " required
 filetype plugin indent on           " required
@@ -31,6 +34,7 @@ set autoread                        " Set auto read when file is changed
 set backspace=eol,start,indent      " Configure backspace so it acts as it should act
 set encoding=utf8
 set clipboard=unnamed               " Use system clipboard
+set paste
 
 " Search setting
 set hlsearch                        " Highlight word when search
@@ -64,22 +68,29 @@ map <C-j> <C-W>j                    " Move between split window
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+map <C-n> :NERDTreeToggle<CR>
+map <leader>tn :tabn<CR>
+map <leader>tp :tabp<CR>
 
 map <silent><leader>sv :source ~/.vimrc<CR>
 map <silent><leader>ev :edit ~/.vimrc<CR> 
 
 " Normal Mode
-"nnoremap E $                       " Move cursor to end of line
-"nnoremap B ^                       " Move cursor to begin of lien
+nnoremap E $                       " Move cursor to end of line
+nnoremap B ^                       " Move cursor to begin of lien
 nnoremap <silent><leader><space> :nohlsearch<CR>    " Turn off search highlight
 
 " Insert Mode 
-inoremap ( ()
-inoremap { {}
-inoremap [ []
+" inoremap ( ()
+" inoremap { {}
+" inoremap [ []
 
 
 """"""""""""""""""""""""""""""""""""""""""""
 " => Special Setting
 """"""""""""""""""""""""""""""""""""""""""""
 set path=./**                       " Find file in current folder
+
+" About NERDTree
+let NERDTreeIgnore = ['\.pyc$']
+
