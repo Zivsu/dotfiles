@@ -115,9 +115,9 @@ alias serve='python -m SimpleHTTPServer'
 alias tree='tree -AC --dirsfirst'
 
 # pwd and cd aliases
-alias .='pwd'
-alias ..='cd ..'
-alias ...='cd ../..'
+# alias .='pwd'
+# alias ..='cd ..'
+# alias ...='cd ../..'
 
 
 ###############################################################################
