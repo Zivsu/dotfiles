@@ -6,6 +6,7 @@ export ZSH=/Users/ziv/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
+# ZSH_THEME="steeef"
 
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
@@ -20,10 +21,14 @@ plugins=(git autojump zsh-autosuggestions osx extract gitfast colorize)
 # Export Golang path
 export GOPATH=/Users/ziv/coding/go/gopath
 
-# pyenv
+export PATH="/usr/local/mysql/bin:$PATH;"
+
+# pyenv + virtualenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH;"
 eval "$(pyenv init -)"
+
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -118,6 +123,10 @@ alias tree='tree -AC --dirsfirst'
 # alias .='pwd'
 # alias ..='cd ..'
 # alias ...='cd ../..'
+
+#shadowsocks
+alias setproxy="export ALL_PROXY=socks5://127.0.0.1:1080"
+alias unsetproxy="unset ALL_PROXY"
 
 
 ###############################################################################
