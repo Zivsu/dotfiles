@@ -35,6 +35,9 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
+#== MongoDB shell ============================================================
+export EDITOR=vim
+
 #== History ===================================================================
 export HISTSIZE=10000           # Number of history lines kept internally
 export SAVEHIST=10000           # Max number of history lines saved
